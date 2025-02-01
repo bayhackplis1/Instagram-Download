@@ -1,0 +1,103 @@
+
+:root {
+    --hacker-green: #0f0;
+    --blood-red: #ff0000;
+    --dark-bg: #000;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--hacker-green);
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px var(--hacker-green);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+                repeating-linear-gradient(transparent, transparent 50px, rgba(0,255,0,0.1) 50px, rgba(0,255,0,0.1) 51px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--hacker-green);
+    box-shadow: 0 0 15px var(--hacker-green);
+}
+
+.card-header {
+    border-bottom: 1px solid var(--blood-red);
+}
+
+.form-control {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--hacker-green);
+    color: var(--hacker-green);
+}
+
+.form-control:focus {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: var(--blood-red);
+    box-shadow: 0 0 10px var(--blood-red);
+    color: var(--hacker-green);
+}
+
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--hacker-green);
+    color: var(--hacker-green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+    background: var(--hacker-green);
+    color: var(--dark-bg);
+    box-shadow: 0 0 15px var(--hacker-green);
+}
+
+.progress {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--hacker-green);
+    height: 25px;
+}
+
+.progress-bar {
+    background: var(--blood-red);
+    box-shadow: 0 0 10px var(--blood-red);
+}
+
+#statusMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--blood-red);
+    text-shadow: 0 0 5px var(--blood-red);
+}
+
+.btn-outline-primary {
+    border-color: var(--hacker-green);
+    color: var(--hacker-green);
+}
+
+.btn-outline-primary:hover {
+    background: var(--hacker-green);
+    color: var(--dark-bg);
+}
+
+.btn-check:checked + .btn-outline-primary {
+    background: var(--hacker-green);
+    color: var(--dark-bg);
+}
+
+.alert-danger {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: var(--blood-red);
+    color: var(--blood-red);
+}
